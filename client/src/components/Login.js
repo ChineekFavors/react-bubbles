@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import {axiosWithAuth} from './utils/axiosWithAuth.js';
 
-const Login = () => {
+const Login = (props) => {
 	const [credentials, setCredentials] = useState({username: '', password: ''});
 	console.log(credentials);
   // make a post request to retrieve a token from the api
