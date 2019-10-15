@@ -22,10 +22,11 @@ const ColorList = ({ colors, updateColors, fetchData }) => {
   };
 
   const saveEdit = e => {
+   
     e.preventDefault();
     axiosWithAuth()
-    .put(`colors/:id/${colorToEdit.id}`)
-    .then(res => {console.log(res)})
+    .put(`colors/:${colorToEdit.id}`,colorToEdit)
+    .then(res => fetchData())
     .catch(err => console.log(err))
     // Make a put request to save your updated color
     // think about where will you get the id from...
@@ -33,7 +34,7 @@ const ColorList = ({ colors, updateColors, fetchData }) => {
   };
 
   const deleteColor = color => {
-    console.log('deleteColor:color', color.color)
+  
     
     axiosWithAuth()
     .delete(`colors/:${color.id}`)
