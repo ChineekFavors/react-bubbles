@@ -10,7 +10,7 @@ import {axiosWithAuth} from './utils/axiosWithAuth.js';
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
-console.log(colorList)
+
   const fetchData = () => {
   	axiosWithAuth()
   		.get('/colors')
