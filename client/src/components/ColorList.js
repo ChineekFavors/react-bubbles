@@ -109,6 +109,7 @@ const ColorList = ({ colors, updateColors, fetchData }) => {
           </div>
         </form>
       )}
+      {/* form for adding a color */}
       <form onSubmit={addColor}>
         <legend>add color</legend>
         <label>
